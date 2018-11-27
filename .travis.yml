@@ -6,10 +6,11 @@ node_js: 8
 
 env:
   global:
-    TRAVIS_KUBE_VERSION=1.12
+    TRAVIS_KUBE_VERSION=1.11
 
 before_install:
   - ./tools/travis/start-cluster.sh
+  - ./tools/travis/start-openwhisk.sh
 
 script:
   - echo hi
